@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--endbuild-->
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="quote-generator">
+                <div class="quote-container">
+                    <span class="quote-item"></span>
+                    <button class="next-btn" onclick="getNewQuote()"></button>
+                </div>
+                <span class="quote-author"></span>
+            </div>
+            <div class="bottom-block-wrapper">
+                <div class="time-wrapper">
+                    <div class="time-of-day">
+                        <span class="time-icon"></span>
+                        <span class="wish"></span>
+                    </div>
+                    <span class="current-time"></span>
+                    <span class="current-location"></span>
+                </div>
+                <button class="spoiler-btn" onclick="clickMore()">
+                    <span class="btn-text">More</span>
+                    <span class="btn-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="spoiler-wrapper">
+        <div class="spoiler-content">
+            <div class="spoiler-item">
+                <span class="item-name">Current Timezone</span>
+                <span class="item-value timezone-value"></span>
+            </div>
+            <div class="spoiler-item">
+                <span class="item-name">Day Of The Week</span>
+                <span class="item-value dayweek-value"></span>
+            </div>
+            <div class="spoiler-item">
+                <span class="item-name">Day Of The Year</span>
+                <span class="item-value dayyear-value"></span>
+            </div>
+            <div class="spoiler-item">
+                <span class="item-name">Week Number</span>
+                <span class="item-value week-value"></span>
+            </div>
+        </div>
+    </div>
+    <audio src="audio/01. LA1.mp3" autoplay></audio>
+        
+    <!--build:js js/main.min.js -->
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

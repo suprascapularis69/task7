@@ -1,0 +1,29 @@
+@mixin wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@mixin font-style($fs, $fw, $lh, $fc) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $fc;
+}
+
+@mixin buttons($mw, $h, $br, $btn-bg, $pl, $pr) {
+    min-width: $mw;
+    height: $h;
+    background: $btn-bg;
+    border-radius: $br;
+    padding-left: $pl;
+    padding-right: $pr;
+}
