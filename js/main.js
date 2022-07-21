@@ -11,8 +11,8 @@ function getTimeOfDay() {
     let thehour = datetoday.getHours();
 
     if (thehour >= 6 && thehour < 10) {
-        wrapper.style.backgroundImage = "url('../images/morning-bg.png')";
-        timeIcon.style.backgroundImage = "url('../images/sun.svg')";
+        wrapper.style.backgroundImage = "url('./images/morning-bg.png')";
+        timeIcon.style.backgroundImage = "url('./images/sun.svg')";
         spoilerBlock.style.background = "rgba(255, 255, 255, 0.75)";
         spoilerItemName.forEach((item)  => {
             item.style.color = "#303030";
@@ -27,8 +27,8 @@ function getTimeOfDay() {
         }
     }
     if (thehour >= 10 && thehour < 16) {
-        wrapper.style.backgroundImage = "url('../images/morning-bg.png')";
-        timeIcon.style.backgroundImage = "url('../images/sun.svg')";
+        wrapper.style.backgroundImage = "url('./images/morning-bg.png')";
+        timeIcon.style.backgroundImage = "url('./images/sun.svg')";
         spoilerBlock.style.background = "rgba(255, 255, 255, 0.75)";
         spoilerItemName.forEach((item)  => {
             item.style.color = "#303030";
@@ -43,8 +43,8 @@ function getTimeOfDay() {
         }
     }
     if (thehour >= 16 && thehour < 22) {
-        wrapper.style.backgroundImage = "url('../images/night-bg.png')";
-        timeIcon.style.backgroundImage = "url('../images/moon.svg')";
+        wrapper.style.backgroundImage = "url('./images/night-bg.png')";
+        timeIcon.style.backgroundImage = "url('./images/moon.svg')";
         spoilerBlock.style.background = "rgba(0, 0, 0, 0.75)";
         if (window.innerWidth <= 650) {
             wish.innerHTML = 'GOOD EVENING';
@@ -53,8 +53,8 @@ function getTimeOfDay() {
         }
     }
     if (thehour < 6 || thehour >= 22) {
-        wrapper.style.backgroundImage = "url('../images/night-bg.png')";
-        timeIcon.style.backgroundImage = "url('../images/moon.svg')";
+        wrapper.style.backgroundImage = "url('./images/night-bg.png')";
+        timeIcon.style.backgroundImage = "url('./images/moon.svg')";
         spoilerBlock.style.background = "rgba(0, 0, 0, 0.75)";
         if (window.innerWidth <= 650) {
             wish.innerHTML = 'GOOD NIGHT';
