@@ -74,7 +74,7 @@
     @media (max-width: 650px) {
         font-size: 12px;
         line-height: 22px;
-        max-width: 260px;
+        max-width: 250px;
         min-height: 66px;
     }
     @media (max-width: 350px) {
@@ -119,22 +119,23 @@
 }
 
 .time-of-day {
-    max-width: 484px;
+    max-width: max-content;
     min-height: 28px;
     @include flex;
     margin-bottom: 16px;
     align-self: flex-start;
-    @media (max-width: 768px) {
-        max-width: 432px;
+    /*@media (max-width: 768px) {
+        max-width: 440px;
     }
     @media (max-width: 650px) {
-        max-width: 190px;
-    }
+        max-width: 198px;
+    }*/
 }
 
 .time-icon {
     width: 24px;
     height: 24px;
+    margin-right: 10px;
 }
 
 .wish {

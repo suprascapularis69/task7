@@ -4,53 +4,67 @@ function getTimeOfDay() {
     let timeIcon = document.querySelector('.time-icon');
     let spoilerBlock = document.querySelector('.spoiler-wrapper');
     let currentLocation = document.querySelector('.current-location');
-
-    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    currentLocation.innerHTML = 'In ' + timezone;
+    let spoilerItemName = document.querySelectorAll('.item-name');
+    let spoilerItemValue = document.querySelectorAll('.item-value');
 
     datetoday = new Date();  
     let thehour = datetoday.getHours();
 
     if (thehour >= 6 && thehour < 10) {
+        wrapper.style.backgroundImage = "url('../images/morning-bg.png')";
+        timeIcon.style.backgroundImage = "url('../images/sun.svg')";
+        spoilerBlock.style.background = "rgba(255, 255, 255, 0.75)";
+        spoilerItemName.forEach((item)  => {
+            item.style.color = "#303030";
+        })
+        spoilerItemValue.forEach((item)  => {
+            item.style.color = "#303030";
+        })
         if (window.innerWidth <= 650) {
             wish.innerHTML = 'GOOD MORNING';
         } else {
             wish.innerHTML = 'GOOD MORNING, IT’S CURRENTLY';
         }
-        wrapper.style.backgroundImage = "url('../images/morning-bg.png')";
-        timeIcon.style.backgroundImage = "url('../images/sun.svg')";
-        spoilerBlock.style.background = "rgba(255, 255, 255, 0.75)"
     }
     if (thehour >= 10 && thehour < 16) {
+        wrapper.style.backgroundImage = "url('../images/morning-bg.png')";
+        timeIcon.style.backgroundImage = "url('../images/sun.svg')";
+        spoilerBlock.style.background = "rgba(255, 255, 255, 0.75)";
+        spoilerItemName.forEach((item)  => {
+            item.style.color = "#303030";
+        })
+        spoilerItemValue.forEach((item)  => {
+            item.style.color = "#303030";
+        })
         if (window.innerWidth <= 650) {
             wish.innerHTML = 'GOOD AFTERNOON';
         } else {
             wish.innerHTML = 'GOOD AFTERNOON, IT’S CURRENTLY';
         }
-        wrapper.style.backgroundImage = "url('../images/morning-bg.png')";
-        timeIcon.style.backgroundImage = "url('../images/sun.svg')";
-        spoilerBlock.style.background = "rgba(255, 255, 255, 0.75)"
     }
     if (thehour >= 16 && thehour < 22) {
+        wrapper.style.backgroundImage = "url('../images/night-bg.png')";
+        timeIcon.style.backgroundImage = "url('../images/moon.svg')";
+        spoilerBlock.style.background = "rgba(0, 0, 0, 0.75)";
         if (window.innerWidth <= 650) {
             wish.innerHTML = 'GOOD EVENING';
         } else {
             wish.innerHTML = 'GOOD EVENING, IT’S CURRENTLY';
         }
+    }
+    if (thehour < 6 || thehour >= 22) {
         wrapper.style.backgroundImage = "url('../images/night-bg.png')";
         timeIcon.style.backgroundImage = "url('../images/moon.svg')";
-        spoilerBlock.style.background = "rgba(0, 0, 0, 0.75)"
-    }
-    if (thehour >= 22 && thehour < 6) {
+        spoilerBlock.style.background = "rgba(0, 0, 0, 0.75)";
         if (window.innerWidth <= 650) {
             wish.innerHTML = 'GOOD NIGHT';
         } else {
             wish.innerHTML = 'GOOD NIGHT, IT’S CURRENTLY';
         }
-        wrapper.style.backgroundImage = "url('../images/night-bg.png')";
-        timeIcon.style.backgroundImage = "url('../images/moon.svg')";
-        spoilerBlock.style.background = "rgba(0, 0, 0, 0.75)"
     }
+
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    currentLocation.innerHTML = 'In ' + timezone;
 }
 
 getTimeOfDay();
