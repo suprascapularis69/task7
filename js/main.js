@@ -89,19 +89,19 @@ setInterval(function () {
 }, 500);
 
 const getNewQuote = async () => {
-    const text = document.querySelector('.quote-item');
+    let text = document.querySelector('.quote-item');
     let author = document.querySelector('.quote-author');
 
     let url="https://type.fit/api/quotes";
     const response = await fetch(url); 
     const allQuotes = await response.json();
 
-    const index = Math.floor(Math.random() * allQuotes.length);
-    const quote = allQuotes[index].text;
-    const auth = allQuotes[index].author;
+    let index = Math.floor(Math.random() * allQuotes.length);
+    let quote = allQuotes[index].text;
+    let auth = allQuotes[index].author;
 
     if (auth == null) {
-        author = "Anonymous";
+        auth = "Anonymous";
     }
 
     text.innerHTML = '"' + quote + '"';
