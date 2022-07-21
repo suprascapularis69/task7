@@ -90,7 +90,7 @@ setInterval(function () {
 
 const getNewQuote = async () => {
     const text = document.querySelector('.quote-item');
-    const author = document.querySelector('.quote-author');
+    let author = document.querySelector('.quote-author');
 
     let url="https://type.fit/api/quotes";
     const response = await fetch(url); 
